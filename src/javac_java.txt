@@ -1,0 +1,28 @@
+Para compilar paquetes y tener una estructura de trabajo (classpath), realizamos lo siguiente:
+javac [directorio de los archivos que conforman la aplicación .java] -d [carpeta destino de los .class o archivos compilados]
+Por ejemplo se tiene organizada la carpeta de trabjo de la siguiente manera :
+c:.
+|----java_curso
+        |------bin
+        |------src
+                |-----abstraccion
+                |-----encapsulamiento
+                            |--------objetos
+                            |--------servicios
+                |-----excepciones
+                |-----herencia
+                            |--------objetos
+                            |--------otros_objetos
+                            |--------servicios
+                |-----instancia
+                |-----polimorfismo
+                            |--------objetos
+                            |--------otros_objetos
+                            |--------servicios
+                |-----Test.java
+De esta manera se tiene la compilación en la caprte bin de la siguiente manera y posicionándonos en Desktop:
+javac java_curso\src\Test.java [los archivos de la aplicacion a ejecutar] -d java_curso\bin
+
+A continuación al no notificarnos de algún error o problema, ejecutamos nuestro programa a través del intérprete o JVM:
+java -cp [localización de nuestros .class o estructura de trabajo] [nombre del main]
+java -cp java_curso\bin Test
